@@ -49,7 +49,7 @@ event-booking-system/
 ### 1. Clone the repository
 
 ```
-git clone <your-repo-link>
+git clone https://github.com/DivyamChitransh/Event_Management_System.git
 cd event-booking-system
 ```
 
