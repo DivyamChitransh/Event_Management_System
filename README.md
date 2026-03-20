@@ -31,12 +31,15 @@ A backend system built using **Node.js, Express, and MySQL** that allows users t
 ```
 event-booking-system/
 │
+├── collection/
 ├── controllers/
 ├── models/
 ├── routes/
 ├── middleware/
 ├── schema.sql
 ├── swagger.yaml
+├── docker-compose.yml
+├── Dockerfile
 ├── app.js
 ├── .env
 └── README.md
@@ -139,6 +142,12 @@ Swagger UI available at:
 
 ```
 http://localhost:8800/api-docs
+```
+
+Deployed server available at:
+
+```
+https://event-management-system-k3r1.onrender.com
 ```
 
 ---
