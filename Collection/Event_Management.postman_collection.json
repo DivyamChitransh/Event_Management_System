@@ -1,0 +1,166 @@
+{
+  "info": {
+    "_postman_id": "d65feeb5-7eb8-49cc-a523-df8ab189f916",
+    "name": "Event_Management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40781322"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Sapna\",\r\n    \"email\": \"Sapzz@gmail.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8800/api/users/register",
+          "host": [
+            "localhost"
+          ],
+          "port": "8800",
+          "path": [
+            "api",
+            "users",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register Event",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\" : \"Comic Con\",\r\n    \"description\": \"Best Comic Con of the area in the upcoming days\",\r\n    \"date\": \"2026-04-01\",\r\n    \"capacity\" : 50\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8800/api/events/register",
+          "host": [
+            "localhost"
+          ],
+          "port": "8800",
+          "path": [
+            "api",
+            "events",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Events",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8800/api/events",
+          "host": [
+            "localhost"
+          ],
+          "port": "8800",
+          "path": [
+            "api",
+            "events"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Book Event",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"user_id\" : 1,\r\n    \"event_id\" : 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8800/api/bookings",
+          "host": [
+            "localhost"
+          ],
+          "port": "8800",
+          "path": [
+            "api",
+            "bookings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "attendance",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"booking_code\":\"BOOK_1774010236633\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8800/api/events/1/attendance",
+          "host": [
+            "localhost"
+          ],
+          "port": "8800",
+          "path": [
+            "api",
+            "events",
+            "1",
+            "attendance"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user bookings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8800/api/users/1/bookings",
+          "host": [
+            "localhost"
+          ],
+          "port": "8800",
+          "path": [
+            "api",
+            "users",
+            "1",
+            "bookings"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
