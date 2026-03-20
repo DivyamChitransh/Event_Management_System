@@ -153,15 +153,3 @@ http://localhost:8800/api-docs
 * 📍 Add event details (location, address, ticket price)
 * 👤 Extend user profile (mobile number, address)
 * 📊 Analytics (popular events, booking trends)
-
----
-
-## 👨‍💻 Author
-
-**Divyam**
-
----
-
-## ⭐ Notes
-
-This project focuses on building a **scalable backend system** with proper database design and handling real-world problems like **concurrent bookings and data consistency**.
