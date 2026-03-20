@@ -1,0 +1,107 @@
+openapi: 3.0.0
+info:
+  title: Event Booking API
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8800/api
+
+paths:
+
+  /events:
+    get:
+      summary: Get all events
+      responses:
+        '200':
+          description: List of events
+
+  /events/register:
+    post:
+      summary: Create a new event
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - title
+                - date
+                - capacity
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                date:
+                  type: string
+                  example: "2026-04-01"
+                total_capacity:
+                  type: integer
+      responses:
+        '201':
+          description: Event created
+
+  /bookings:
+    post:
+      summary: Book a ticket
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - user_id
+                - event_id
+              properties:
+                user_id:
+                  type: integer
+                event_id:
+                  type: integer
+      responses:
+        '201':
+          description: Booking successful
+
+    get:
+      summary: Get all bookings
+      responses:
+        '200':
+          description: List of bookings
+
+  /users/{id}/bookings:
+    get:
+      summary: Get bookings of a user
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: User bookings
+
+  /events/{id}/attendance:
+    post:
+      summary: Mark attendance
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - booking_code
+              properties:
+                booking_code:
+                  type: string
+      responses:
+        '200':
+          description: Attendance marked
